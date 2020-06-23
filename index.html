@@ -6,9 +6,27 @@
     <title>Document</title>
   </head>
   <body>
-    <button></button>
-    <div id="" p></div>
-    <div class="re"></div>
+    hllo
+    <div id="my-keen-slider" class="keen-slider">
+      <img
+        src="https://www.photo-art.co.il/wp-content/uploads/2015/06/BY1A65881.jpg"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8baKGS9NHHMwgqyuHxc_4Gzoi0M_OCsqFWA&usqp=CAU"
+      />
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@4.1.3/keen-slider.min.js"></script>
+
+    <script>
+      var slider = new KeenSlider("#my-keen-slider", {
+        slidesPerView: 3,
+        mode: "free",
+        spacing: 15,
+        loop: true,
+      });
+    </script>
   </body>
+
   <script src="main.js"></script>
 </html>
