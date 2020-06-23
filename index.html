@@ -1,32 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
+    <title>Keen-Slider</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/keen-slider@4.1.5/keen-slider.min.css"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      img {
+        height: 250px;
+        width:1000px;
+        padding:-100px;
+      }
+    </style>
   </head>
+
   <body>
-    hllo
     <div id="my-keen-slider" class="keen-slider">
-      <img
-        src="https://www.photo-art.co.il/wp-content/uploads/2015/06/BY1A65881.jpg"
-      />
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS8baKGS9NHHMwgqyuHxc_4Gzoi0M_OCsqFWA&usqp=CAU"
-      />
-      
+
+      <div class="keen-slider__slide number-slide1">
+        <img
+          src="https://www.misgeret.co.il/wht_Images/catalog/style/image_content_91.jpg"
+        />
+      </div>
+    
+      <div class="keen-slider__slide number-slide2">
+        <img
+          src="data:image/jpeg;base64,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"
+        />
+      </div>
+      <div class="keen-slider__slide number-slide3">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSK9Ka47NQvXZXNF9df5SEwisSwPcZ69ZHq7w&usqp=CAU"
+        />
+      </div>
+      <div class="keen-slider__slide number-slide4">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTi8I_pML20dU1M6HkHsV7A2h2OnKrMN6oYFw&usqp=CAU"
+        />
+      </div>
+      <div class="keen-slider__slide number-slide5">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTs6WqPi1LZR5iDWwNO0jbrlz2quuHEjl2EDA&usqp=CAU"
+        />
+      </div>
+      <div class="keen-slider__slide number-slide6">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkNnNRXvMGmlij2Xx05ZVv8Avwgrr3WdtE2Q&usqp=CAU"
+        />
+      </div>
+    
+    <div style="margin-top: 30px; text-align: center;"></div>
+    <div style="margin-top: 30px; text-align: center;"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/keen-slider@4.1.3/keen-slider.min.js"></script>
-
     <script>
       var slider = new KeenSlider("#my-keen-slider", {
-        slidesPerView: 3,
-        mode: "free",
-        spacing: 15,
         loop: true,
+        slidesPerView: 2,
       });
     </script>
   </body>
-
-  <script src="main.js"></script>
 </html>
